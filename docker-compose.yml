@@ -1,0 +1,11 @@
+services:
+  resturant-dashboard:
+    image: resturant-dashboard
+    container_name: resturant_dashboard_svelt
+    build:
+      context: ./resturant-dashboard
+      dockerfile: Dockerfile
+    ports:
+      - 5173:5173
+    volumes:
+      - ./resturant-dashboard/src:/usr/src/app/src
